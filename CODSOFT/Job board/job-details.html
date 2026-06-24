@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Details</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background:#f4f4f4;
+            margin:0;
+        }
+
+        header{
+            background:#007bff;
+            color:white;
+            text-align:center;
+            padding:15px;
+        }
+
+        .container{
+            width:80%;
+            margin:30px auto;
+        }
+
+        .card{
+            background:white;
+            padding:25px;
+            border-radius:10px;
+            box-shadow:0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h2{
+            color:#007bff;
+        }
+
+        button{
+            background:#28a745;
+            color:white;
+            border:none;
+            padding:10px 20px;
+            border-radius:5px;
+            cursor:pointer;
+        }
+
+        button:hover{
+            background:#218838;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Job Details</h1>
+</header>
+
+<div class="container">
+    <div class="card" id="jobDetails"></div>
+</div>
+
+<script>
+
+let job = localStorage.getItem("selectedJob");
+let details = document.getElementById("jobDetails");
+
+if(job === "Web Developer"){
+
+details.innerHTML = `
+<h2>Web Developer</h2>
+
+<p><strong>Company:</strong> ABC Technologies</p>
+<p><strong>Location:</strong> Chennai</p>
+<p><strong>Salary:</strong> ₹4,50,000 - ₹6,00,000 per year</p>
+
+<h3>Skills Required</h3>
+
+<ul>
+<li>HTML</li>
+<li>CSS</li>
+<li>JavaScript</li>
+<li>Responsive Design</li>
+</ul>
+
+<a href="apply.html">
+<button>Apply Now</button>
+</a>
+`;
+
+}
+
+else if(job === "Frontend Developer"){
+
+details.innerHTML = `
+<h2>Frontend Developer</h2>
+
+<p><strong>Company:</strong> XYZ Solutions</p>
+<p><strong>Location:</strong> Bangalore</p>
+<p><strong>Salary:</strong> ₹5,00,000 - ₹7,50,000 per year</p>
+
+<h3>Skills Required</h3>
+
+<ul>
+<li>HTML</li>
+<li>CSS</li>
+<li>JavaScript</li>
+<li>React.js</li>
+<li>Bootstrap</li>
+</ul>
+
+<a href="apply.html">
+<button>Apply Now</button>
+</a>
+`;
+
+}
+
+else if(job === "UI/UX Designer"){
+
+details.innerHTML = `
+<h2>UI/UX Designer</h2>
+
+<p><strong>Company:</strong> Creative Studio</p>
+<p><strong>Location:</strong> Hyderabad</p>
+<p><strong>Salary:</strong> ₹4,00,000 - ₹6,50,000 per year</p>
+
+<h3>Skills Required</h3>
+
+<ul>
+<li>Figma</li>
+<li>Adobe XD</li>
+<li>Wireframing</li>
+<li>Prototyping</li>
+<li>User Research</li>
+</ul>
+
+<a href="apply.html">
+<button>Apply Now</button>
+</a>
+`;
+
+}
+
+else if(job === "Backend Developer"){
+
+details.innerHTML = `
+<h2>Backend Developer</h2>
+
+<p><strong>Company:</strong> Tech Solutions</p>
+<p><strong>Location:</strong> Coimbatore</p>
+<p><strong>Salary:</strong> ₹6,00,000 - ₹9,00,000 per year</p>
+
+<h3>Skills Required</h3>
+
+<ul>
+<li>Java</li>
+<li>Python</li>
+<li>Node.js</li>
+<li>SQL</li>
+<li>REST APIs</li>
+</ul>
+
+<a href="apply.html">
+<button>Apply Now</button>
+</a>
+`;
+
+}
+
+else if(job === "Full Stack Developer"){
+
+details.innerHTML = `
+<h2>Full Stack Developer</h2>
+
+<p><strong>Company:</strong> Innovate Systems</p>
+<p><strong>Location:</strong> Chennai</p>
+<p><strong>Salary:</strong> ₹8,00,000 - ₹12,00,000 per year</p>
+
+<h3>Skills Required</h3>
+
+<ul>
+<li>HTML</li>
+<li>CSS</li>
+<li>JavaScript</li>
+<li>React.js</li>
+<li>Node.js</li>
+<li>MongoDB</li>
+<li>Git & GitHub</li>
+</ul>
+
+<a href="apply.html">
+<button>Apply Now</button>
+</a>
+`;
+
+}
+
+else{
+
+details.innerHTML = `
+<h2>No Job Selected</h2>
+<p>Please go back to Jobs page and select a job.</p>
+`;
+
+}
+
+
+</script>
+<script src="script.js"></script>
+
+</body>
+</html>

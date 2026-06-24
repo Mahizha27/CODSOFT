@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Login</h1>
+
+    <nav>
+        <a href="index3.html">Home</a>
+        <a href="jobs.html">Jobs</a>
+        <a href="employer.html">Employer</a>
+        <a href="candidate.html">Candidate</a>
+        <a href="login.html">Login</a>
+        <a href="register.html">Register</a>
+    </nav>
+</header>
+
+<div class="container">
+
+    <h2>User Login</h2>
+
+    <form onsubmit="loginUser(event)">
+
+        <input type="email"
+        id="email"
+        placeholder="Enter Email"
+        required>
+
+        <br><br>
+
+        <input type="password"
+        id="password"
+        placeholder="Enter Password"
+        required>
+        <p>
+           <a href="#" onclick="forgotPassword()">
+             Forgot Password?
+            </a>
+        </p>
+
+        <br><br>
+
+        <button type="submit">
+            Login
+        </button>
+
+    </form>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

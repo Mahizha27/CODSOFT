@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apply Job</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Job Application Form</h1>
+
+    <nav>
+        <a href="index3.html">Home</a>
+        <a href="jobs.html">Jobs</a>
+        <a href="employer.html">Employer</a>
+        <a href="candidate.html">Candidate</a>
+        <a href="login.html">Login</a>
+        <a href="register.html">Register</a>
+    </nav>
+</header>
+
+<div class="container">
+
+    <h2>Apply for Job</h2>
+
+    <form onsubmit="submitApplication(event)">
+
+        <input type="text" id="name"
+        placeholder="Full Name" required>
+        <br><br>
+
+        <input type="email" id="email"
+        placeholder="Email Address" required>
+        <br><br>
+
+        <input type="tel"
+        placeholder="Phone Number" required>
+        <br><br>
+
+        <input type="file"
+        id="resume" required>
+        <br><br>
+
+        <button type="submit">
+            Submit Application
+        </button>
+
+    </form>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

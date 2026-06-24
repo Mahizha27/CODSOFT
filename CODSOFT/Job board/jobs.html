@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Job Listings</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Job Listings</h1>
+
+    <nav>
+        <a href="index3.html">Home</a>
+        <a href="jobs.html">Jobs</a>
+        <a href="employer.html">Employer</a>
+        <a href="candidate.html">Candidate</a>
+        <a href="login.html">Login</a>
+        <a href="register.html">Register</a>
+    </nav>
+</header>
+
+<section class="container">
+
+    <h2>Available Jobs</h2>
+
+    <input
+        type="text"
+        id="search"
+        placeholder="Search Jobs..."
+        onkeyup="searchJobs()"
+    >
+
+    <br><br>
+
+    <div id="jobs">
+
+        <div class="job">
+            <h3>Web Developer</h3>
+            <p><strong>Company:</strong> ABC Technologies</p>
+            <p><strong>Location:</strong> Chennai</p>
+
+            
+            <button onclick="viewJob('Web Developer')">
+                View Details
+            </button>
+
+
+            <button onclick="applyJob('Web Developer')">
+                Apply
+            </button>
+        </div>
+
+        <div class="job">
+            <h3>Frontend Developer</h3>
+            <p><strong>Company:</strong> XYZ Solutions</p>
+            <p><strong>Location:</strong> Bangalore</p>
+
+           
+            <button onclick="viewJob('Frontend Developer')">
+                View Details
+            </button>
+
+
+            <button onclick="applyJob('Frontend Developer')">
+                Apply
+            </button>
+        </div>
+
+        <div class="job">
+            <h3>UI/UX Designer</h3>
+            <p><strong>Company:</strong> Creative Studio</p>
+            <p><strong>Location:</strong> Hyderabad</p>
+
+            <button onclick="viewJob('UI/UX Designer')">
+                View Details
+            </button>
+
+
+            <button onclick="applyJob('UI/UX Designer')">
+                Apply
+            </button>
+        </div>
+        <div class="job">
+            <h3>Backend Developer</h3>
+            <p><strong>Company:</strong> Tech Solutions</p>
+            <p><strong>Location:</strong> Coimbatore</p>
+
+             
+             <button onclick="viewJob('Backend Developer')">
+                View Details
+            </button>
+
+
+            <button onclick="applyJob('Backend Developer')">
+                Apply
+            </button>
+        </div>
+
+        <div class="job">
+             <h3>Full Stack Developer</h3>
+             <p><strong>Company:</strong> Innovate Systems</p>
+             <p><strong>Location:</strong> Chennai</p>
+
+            
+             <button onclick="viewJob('Full Stack Developer')">
+                View Details
+            </button>
+
+
+            <button onclick="applyJob('Full Stack Developer')">
+                 Apply
+             </button>
+        </div>
+
+    </div>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>

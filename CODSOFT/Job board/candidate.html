@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Candidate Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Candidate Dashboard</h1>
+
+    <nav>
+        <a href="index3.html">Home</a>
+        <a href="jobs.html">Jobs</a>
+        <a href="employer.html">Employer</a>
+        <a href="candidate.html">Candidate</a>
+        <a href="login.html">Login</a>
+        <a href="register.html">Register</a>
+    </nav>
+</header>
+
+<div class="container">
+
+    <h2>Profile Information</h2>
+
+    <p><strong>Name:</strong> <span id="userName"></span></p>
+
+    <p><strong>Email:</strong> <span id="userEmail"></span></p>
+
+    <h2>Applied Jobs</h2>
+
+    <ul id="appliedJobs"></ul>
+     
+    <div class="logout-container">
+        <button
+    onclick="logout()">logout</button>
+    </div>
+    <button onclick="clearAppliedJobs()">
+    Clear All Applied Jobs
+</button>
+    
+
+
+</div>
+
+
+<script>
+    if(localStorage.getItem("loggedIn") !== "true"){
+    window.location.href = "login.html";
+}
+
+document.getElementById("userName").innerText =
+localStorage.getItem("name") || "Not Available";
+
+document.getElementById("userEmail").innerText =
+localStorage.getItem("email") || "Not Available";
+
+let jobs =
+JSON.parse(localStorage.getItem("appliedJobs")) || [];
+
+let jobList =
+document.getElementById("appliedJobs");
+
+if(jobs.length === 0){
+
+    jobList.innerHTML =
+    "<li>No jobs applied yet</li>";
+
+}else{
+
+    jobs.forEach(function(job){
+
+        let li =
+        document.createElement("li");
+
+        li.textContent = job;
+
+        jobList.appendChild(li);
+
+    });
+
+}
+
+</script>
+<script src="script.js"></script>
+
+</body>
+</html>
